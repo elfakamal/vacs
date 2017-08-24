@@ -1,0 +1,19 @@
+{
+  "name": "vacs",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "git@bitbucket.org:elfakamal/vacs.git",
+  "author": "Kamal Farsaoui <elfa.kamal@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/react": "next",
+    "@types/react-dom": "next",
+    "react": "next",
+    "react-dom": "next",
+    "rxjs-es": "^5.0.0-beta.12",
+    "tslint": "^5.6.0",
+    "typescript": "2.5.1",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "jsx": "react",
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017",
+      "dom"
+    ],
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "module": "commonjs",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "target": "es6",
+    "outDir": "dist"
+  },
+  "include": [
+    "./definitions/**/*",
+    "./src/**/*"
+  ]
+}
