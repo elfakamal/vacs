@@ -5,12 +5,7 @@ interface Props {
 }
 
 const Message = (props: Props) => (
-  <div style={{
-    backgroundColor: '#F5F5F5',
-    borderRadius: 3,
-    padding: 20,
-    margin: '5px 0',
-  }}>
+  <div className="message">
     {props.message.text}
   </div>
 );

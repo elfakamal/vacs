@@ -18,6 +18,7 @@ export default class Conversation extends React.Component<Props, State> {
     super(props);
 
     this.renderEntity = this.renderEntity.bind(this);
+    this.loadMessages = this.loadMessages.bind(this);
   }
 
   state = {
@@ -25,6 +26,10 @@ export default class Conversation extends React.Component<Props, State> {
   } as State;
 
   componentDidMount() {
+    this.loadMessages();
+  }
+
+  loadMessages() {
     const state$ = Rx.Observable.fromPromise(getMessages(this.props.conversation.uuid));
 
     state$.subscribe(
@@ -45,7 +50,7 @@ export default class Conversation extends React.Component<Props, State> {
 
   render() {
     return (
-      <section style={{ width: '80%', margin: '50px auto' }}>
+      <section className="conversation">
         <header>
           <h3>{this.props.conversation.name}</h3>
         </header>

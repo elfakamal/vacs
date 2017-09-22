@@ -6,6 +6,7 @@ export default {
     'core-js',
     'setimmediate',
     'isomorphic-fetch',
+    path.join(__dirname, 'src', 'assets', 'scss', 'main.scss'),
     path.join(__dirname, 'src', 'index'),
   ],
   resolve: {
@@ -35,6 +36,14 @@ export default {
           { loader: 'style-loader' },
           { loader: 'css-loader' },
           { loader: 'less-loader' },
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
         ],
       },
       // JS/TS

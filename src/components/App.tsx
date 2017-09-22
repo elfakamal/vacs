@@ -19,7 +19,7 @@ const user: IUser = {
   email: 'toto@tata.com',
 };
 
-export default class App extends React.Component<Readonly<Props>, Readonly<State>> {
+export default class App extends React.Component<Readonly<Props>, State> {
   constructor(props: Props) {
     super(props);
 
@@ -53,13 +53,9 @@ export default class App extends React.Component<Readonly<Props>, Readonly<State
   render() {
     const { conversations } = this.state;
 
-    console.log(this.state);
-
     return (
       <div>
-        <div>
-          {conversations.map(this.renderConversation)}
-        </div>
+        {conversations.map(this.renderConversation)}
       </div>
     );
   }
