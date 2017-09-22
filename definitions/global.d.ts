@@ -1,25 +1,29 @@
 interface IUser {
-  id: string;
+  uuid: string;
   firstname: string;
   lastname: string;
   email: string;
 }
 
-interface JourneyNode {
-  id: string;
+interface IJourneyNode {
+  uuid: string;
   type: string;
 }
 
 interface IMessage {
+  uuid: string;
   text: string;
-  author: IUser;
+  author: string;
+  conversation: string;
   date: number;
 }
 
 interface IJourney extends IMessage {
-  nodes: JourneyNode[];
+  nodes: IJourneyNode[];
 }
 
 interface IConversation {
+  uuid: string;
+  name: string;
   entities: IMessage[];
 }

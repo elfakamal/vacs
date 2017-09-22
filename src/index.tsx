@@ -1,9 +1,11 @@
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 
-import App from './App';
+import App from './components/App';
 
-ReactDOM.render(
+render(
   <App />,
   document.getElementById('root'),
 );
+
+// see https://react.rocks/example/google-map-react
