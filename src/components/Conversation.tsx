@@ -1,5 +1,6 @@
-import * as Rx from '@reactivex/rxjs';
+import { IConversation, IMessage } from 'common';
 import * as React from 'react';
+import * as Rx from 'rxjs';
 
 import getMessages from '../services/messages';
 import Message from './Message';

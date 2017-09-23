@@ -1,10 +1,17 @@
 import * as React from 'react';
 import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 
-import App from './components/App';
+import { INITIAL_STATE } from './constants';
+import App from './containers/App';
+import createStore from './store/dev';
+
+const store = createStore(INITIAL_STATE);
 
 render(
-  <App />,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root'),
 );
 

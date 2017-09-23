@@ -1,3 +1,4 @@
+import { IJourney, IJourneyNode } from 'common';
 import * as React from 'react';
 
 interface Props {

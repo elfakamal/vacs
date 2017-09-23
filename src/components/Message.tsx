@@ -1,3 +1,4 @@
+import { IMessage } from 'common';
 import * as React from 'react';
 
 interface Props {
