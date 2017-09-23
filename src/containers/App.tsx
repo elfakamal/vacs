@@ -1,11 +1,12 @@
 import { IConversation, State } from 'common';
 import * as React from 'react';
 import { connect } from 'react-redux';
-// import * as Rx from 'rxjs';
 
 import {
-  ConversationRequestAction,
+  ConversationsRequestAction,
   loadConversations,
+  loadMessages,
+  MessagesRequestAction,
 } from '../actions';
 
 import Conversation from '../components/Conversation';
@@ -15,7 +16,8 @@ interface Props {
 }
 
 interface DispatchProps {
-  loadConversations: () => ConversationRequestAction;
+  loadConversations: () => ConversationsRequestAction;
+  loadMessages: (conversationUuid: string) => MessagesRequestAction;
 }
 
 const mapStateToProps = (state: State): State => ({
@@ -25,7 +27,9 @@ const mapStateToProps = (state: State): State => ({
 
 const mapDispatchToProps: DispatchProps = {
   loadConversations,
+  loadMessages,
 };
+
 type AllProps = Readonly<State & DispatchProps & Props>;
 
 class App extends React.Component<AllProps> {
@@ -33,15 +37,24 @@ class App extends React.Component<AllProps> {
     super(props);
 
     this.renderConversation = this.renderConversation.bind(this);
+    this.onLoadMessagesClick = this.onLoadMessagesClick.bind(this);
   }
 
   componentDidMount() {
     this.props.loadConversations();
   }
 
+  onLoadMessagesClick(uuid: string) {
+    this.props.loadMessages(uuid);
+  }
+
   renderConversation(conversation: IConversation) {
     return (
-      <Conversation conversation={conversation} key={conversation.uuid}/>
+      <Conversation
+        conversation={conversation}
+        key={conversation.uuid}
+        onLoadMessagesClick={this.onLoadMessagesClick}
+      />
     );
   }
 

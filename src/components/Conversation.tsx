@@ -1,46 +1,18 @@
 import { IConversation, IMessage } from 'common';
 import * as React from 'react';
-import * as Rx from 'rxjs';
 
-import getMessages from '../services/messages';
 import Message from './Message';
 
-// tslint:disable-next-line: no-empty-interface
 interface Props {
   conversation: IConversation;
+  onLoadMessagesClick: (uuid: string) => void;
 }
 
-interface State {
-  entities: IConversation['entities'];
-}
-
-export default class Conversation extends React.Component<Props, State> {
+export default class Conversation extends React.Component<Props, {}> {
   constructor(props: Props) {
     super(props);
 
     this.renderEntity = this.renderEntity.bind(this);
-    this.loadMessages = this.loadMessages.bind(this);
-  }
-
-  state = {
-    entities: [],
-  } as State;
-
-  componentDidMount() {
-    this.loadMessages();
-  }
-
-  loadMessages() {
-    const state$ = Rx.Observable.fromPromise(getMessages(this.props.conversation.uuid));
-
-    state$.subscribe(
-      (entities: IMessage[]) => {
-        this.setState({ entities });
-      },
-      (error: any) => {
-        console.log(error);
-      },
-    );
   }
 
   renderEntity(message: IMessage) {
@@ -50,12 +22,17 @@ export default class Conversation extends React.Component<Props, State> {
   }
 
   render() {
+    const { messages = [] } = this.props.conversation;
+
     return (
       <section className="conversation">
         <header>
           <h3>{this.props.conversation.name}</h3>
+          <button
+            onClick={() => this.props.onLoadMessagesClick(this.props.conversation.uuid)}
+          >load</button>
         </header>
-        {this.state.entities.map(this.renderEntity)}
+        {messages.map(this.renderEntity)}
       </section>
     );
   }

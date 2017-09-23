@@ -45,8 +45,9 @@ declare module 'common' {
   }
   
   interface IConversation {
+    author: string;
     uuid: string;
     name: string;
-    entities: IMessage[];
+    messages: IMessage[];
   }
 }
