@@ -1,37 +1,37 @@
 {
   "users": [
     {
-      "uuid": "8c7493c4-9ac6-401c-93d4-63de5599a427",
+      "id": 1,
       "firstname": "Lacey",
       "lastname": "Pennington",
       "email": "laceypennington@vetron.com"
     },
     {
-      "uuid": "aae28c33-4e1b-491c-8e08-ec7413786394",
+      "id": 2,
       "firstname": "Jannie",
       "lastname": "Buckner",
       "email": "janniebuckner@vetron.com"
     },
     {
-      "uuid": "812a879e-74c5-4bb4-99ae-c281f7b5a7e5",
+      "id": 3,
       "firstname": "Parker",
       "lastname": "Clements",
       "email": "parkerclements@vetron.com"
     },
     {
-      "uuid": "53f5e17b-f379-45c8-8c7e-9567682b1eaa",
+      "id": 4,
       "firstname": "Goldie",
       "lastname": "Madden",
       "email": "goldiemadden@vetron.com"
     },
     {
-      "uuid": "9814f16c-31e6-4997-9a88-ebda7a8bbf91",
+      "id": 5,
       "firstname": "Adeline",
       "lastname": "Santos",
       "email": "adelinesantos@vetron.com"
     },
     {
-      "uuid": "b7752eda-55f2-40f7-b4c9-61212e46049c",
+      "id": 6,
       "firstname": "Rivers",
       "lastname": "Melton",
       "email": "riversmelton@vetron.com"
@@ -39,75 +39,75 @@
   ],
   "messages": [
     {
-      "uuid": "6a9db272-3a70-4628-8a0d-3120221be846",
+      "id": 1,
       "text": "Ut elit duis eiusmod excepteur ullamco non nisi eiusmod. Enim eiusmod ea Lorem do. Sunt sit nulla irure sit veniam quis consequat ipsum eiusmod aliquip ex anim amet. Voluptate laborum irure officia adipisicing.\r\n",
-      "author": "b7752eda-55f2-40f7-b4c9-61212e46049c",
-      "conversation": "74424bc9-4e9e-4e87-9c59-ace30553654c",
+      "author": 6,
+      "conversation": 1,
       "date": 1492385394915
     },
     {
-      "uuid": "33bf5c7f-2159-43e1-beb8-483c6c3bf95a",
+      "id": 2,
       "text": "Nisi aliqua aute consectetur Lorem incididunt ea et veniam. Sunt in anim sit veniam adipisicing aliqua anim ad reprehenderit aliquip irure. In ut consequat esse id ea officia nostrud dolor laboris laborum tempor aliqua enim. Ipsum occaecat id commodo magna Lorem.\r\n",
-      "author": "9814f16c-31e6-4997-9a88-ebda7a8bbf91",
-      "conversation": "6107fbdb-6813-4556-9603-906758a2412c",
+      "author": 5,
+      "conversation": 2,
       "date": 1485417291586
     },
     {
-      "uuid": "69ecb500-637d-4633-9667-f2afdcb30219",
+      "id": 3,
       "text": "Ipsum id commodo cupidatat consectetur reprehenderit elit qui culpa esse ea sit velit sit. Incididunt ullamco officia quis fugiat cupidatat sit consectetur excepteur in mollit voluptate sint. Veniam mollit reprehenderit reprehenderit incididunt cupidatat esse consequat exercitation dolor tempor proident reprehenderit ipsum. Enim enim elit commodo magna et anim in Lorem.\r\n",
-      "author": "9814f16c-31e6-4997-9a88-ebda7a8bbf91",
-      "conversation": "a32aa9ea-55f1-4445-8138-3d4834a2c2d5",
+      "author": 5,
+      "conversation": 3,
       "date": 1484042789570
     },
     {
-      "uuid": "9e8ae2fc-14fd-4c0d-81e1-ab8b2a50a757",
+      "id": 4,
       "text": "Aliqua ad excepteur sint ad. Pariatur qui sit in labore enim ea duis quis ipsum dolore Lorem. Veniam id ullamco ex dolor deserunt minim quis cillum quis nisi tempor id. Elit labore eu occaecat in non labore ut amet reprehenderit. Ipsum velit id non est dolore voluptate Lorem ea. Veniam magna esse sint anim pariatur laborum anim amet.\r\n",
-      "author": "b7752eda-55f2-40f7-b4c9-61212e46049c",
-      "conversation": "6107fbdb-6813-4556-9603-906758a2412c",
+      "author": 6,
+      "conversation": 2,
       "date": 1500486920592
     },
     {
-      "uuid": "fd2f678f-4b01-4aff-927f-e2fd5ff7994f",
+      "id": 5,
       "text": "Incididunt minim excepteur duis officia ad. Cupidatat magna officia exercitation sit. Aute mollit elit mollit culpa commodo veniam. Lorem eiusmod laboris dolore officia cillum reprehenderit occaecat est cillum excepteur est eiusmod. Nostrud ullamco aute eiusmod et aliqua amet. Elit ut cillum anim magna.\r\n",
-      "author": "9814f16c-31e6-4997-9a88-ebda7a8bbf91",
-      "conversation": "74424bc9-4e9e-4e87-9c59-ace30553654c",
+      "author": 5,
+      "conversation": 1,
       "date": 1486225565744
     },
     {
-      "uuid": "eddbaf27-4aa1-4b97-93f2-56ead64cf47d",
+      "id": 6,
       "text": "Aliquip ea aliqua irure do cillum anim id proident. Enim Lorem sit labore consectetur velit eiusmod do. Ea dolore ad cupidatat nisi mollit eiusmod nulla ex culpa anim. Ullamco fugiat ullamco elit id fugiat ad tempor id magna cupidatat officia eu.\r\n",
-      "author": "8c7493c4-9ac6-401c-93d4-63de5599a427",
-      "conversation": "c1777bbb-6f4e-46ac-8bf9-35994cbd6c10",
+      "author": 1,
+      "conversation": 4,
       "date": 1488870724922
     },
     {
-      "uuid": "ab48eec1-7f25-4e0a-97f0-64625e807aa9",
+      "id": 7,
       "text": "Minim Lorem reprehenderit tempor nisi commodo cupidatat nulla Lorem dolore ex veniam nostrud magna. Dolore culpa eiusmod ut id do minim aute do cupidatat Lorem. Nostrud velit exercitation ullamco proident ea eiusmod minim. Ex deserunt ipsum cupidatat qui qui occaecat consectetur sunt excepteur est magna commodo laboris. Adipisicing veniam dolor occaecat ea adipisicing. Est excepteur sint laborum dolore reprehenderit pariatur nulla incididunt.\r\n",
-      "author": "b7752eda-55f2-40f7-b4c9-61212e46049c",
-      "conversation": "6107fbdb-6813-4556-9603-906758a2412c",
+      "author": 6,
+      "conversation": 2,
       "date": 1486077040491
     }
   ],
   "conversations": [
     {
-      "uuid": "74424bc9-4e9e-4e87-9c59-ace30553654c",
+      "id": 1,
       "name": "Zytrac",
-      "author": "b7752eda-55f2-40f7-b4c9-61212e46049c"
+      "author": 6
     },
     {
-      "uuid": "6107fbdb-6813-4556-9603-906758a2412c",
+      "id": 2,
       "name": "Emoltra",
-      "author": "9814f16c-31e6-4997-9a88-ebda7a8bbf91"
+      "author": 5
     },
     {
-      "uuid": "a32aa9ea-55f1-4445-8138-3d4834a2c2d5",
+      "id": 3,
       "name": "Corpulse",
-      "author": "aae28c33-4e1b-491c-8e08-ec7413786394"
+      "author": 2
     },
     {
-      "uuid": "c1777bbb-6f4e-46ac-8bf9-35994cbd6c10",
+      "id": 4,
       "name": "Nitracyr",
-      "author": "9814f16c-31e6-4997-9a88-ebda7a8bbf91"
+      "author": 5
     }
   ]
 }

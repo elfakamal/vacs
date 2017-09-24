@@ -1,6 +1,8 @@
 import { Action, ReducersMapObject, State } from 'common';
 
 import {
+  ADD_MESSAGE_SUCCESS,
+  AddMessageSuccessAction,
   CONVERSATIONS_SUCCESS,
   ConversationsSuccessAction,
   MESSAGES_SUCCESS,
@@ -20,10 +22,20 @@ export default handleActions({
     conversations: action.conversations,
   }),
 
-  [MESSAGES_SUCCESS]: (state, { conversationUuid, messages }: MessagesSuccessAction) => ({
+  [MESSAGES_SUCCESS]: (state, { conversationId, messages }: MessagesSuccessAction) => ({
     ...state,
     conversations: state.conversations.map(conversation => (
-      conversation.uuid !== conversationUuid ? conversation : { ...conversation, messages }
+      conversation.id !== conversationId ? conversation : { ...conversation, messages }
+    )),
+  }),
+
+  [ADD_MESSAGE_SUCCESS]: (state, { conversationId, message }: AddMessageSuccessAction) => ({
+    ...state,
+    conversations: state.conversations.map(conversation => (
+      conversation.id !== conversationId ? conversation : {
+        ...conversation,
+        messages: (conversation.messages || []).concat(message),
+      }
     )),
   }),
 });

@@ -21,19 +21,19 @@ declare module 'common' {
   }
 
   interface IUser {
-    uuid: string;
+    id: number;
     firstname: string;
     lastname: string;
     email: string;
   }
   
   interface IJourneyNode {
-    uuid: string;
+    id: number;
     type: string;
   }
   
   interface IMessage {
-    uuid: string;
+    id: number;
     text: string;
     author: string;
     conversation: string;
@@ -46,7 +46,7 @@ declare module 'common' {
   
   interface IConversation {
     author: string;
-    uuid: string;
+    id: number;
     name: string;
     messages: IMessage[];
   }

@@ -20,7 +20,7 @@ export default class JourneyEditor extends React.Component<Props, State> {
 
   renderNode(node: IJourneyNode) {
     return (
-      <div key={node.uuid}>{node.type}</div>
+      <div key={node.id}>{node.type}</div>
     );
   }
 

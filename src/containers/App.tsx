@@ -3,10 +3,12 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 
 import {
+  AddMessageRequestAction,
   ConversationsRequestAction,
   loadConversations,
   loadMessages,
   MessagesRequestAction,
+  requestAddMessage,
 } from '../actions';
 
 import Conversation from '../components/Conversation';
@@ -17,7 +19,8 @@ interface Props {
 
 interface DispatchProps {
   loadConversations: () => ConversationsRequestAction;
-  loadMessages: (conversationUuid: string) => MessagesRequestAction;
+  loadMessages: (conversationId: number) => MessagesRequestAction;
+  requestAddMessage: (conversationId: number, message: string) => AddMessageRequestAction;
 }
 
 const mapStateToProps = (state: State): State => ({
@@ -26,6 +29,7 @@ const mapStateToProps = (state: State): State => ({
 });
 
 const mapDispatchToProps: DispatchProps = {
+  requestAddMessage,
   loadConversations,
   loadMessages,
 };
@@ -44,16 +48,17 @@ class App extends React.Component<AllProps> {
     this.props.loadConversations();
   }
 
-  onLoadMessagesClick(uuid: string) {
-    this.props.loadMessages(uuid);
+  onLoadMessagesClick(id: number) {
+    this.props.loadMessages(id);
   }
 
   renderConversation(conversation: IConversation) {
     return (
       <Conversation
         conversation={conversation}
-        key={conversation.uuid}
+        key={conversation.id}
         onLoadMessagesClick={this.onLoadMessagesClick}
+        onSaveMessage={this.props.requestAddMessage}
       />
     );
   }
